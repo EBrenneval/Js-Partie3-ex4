@@ -10,22 +10,23 @@
     <label for="confirmation">Confirmez : </label><input type="text" name="confirmation" value="" id="confirmation" />
     <button type="button" onclick = "color()" name="button" >Vérification</button>
   </form>
- <!--Dans le fichier HTML fourni,
- mettre les bordures des inputs en rouge si les mots de passe sont différents.
- Sinon les mettre en vert.-->
- <script>
-function color(){
-  var mdp = document.getElementById("motdepasse");       //déclaration de la variable
-  var confirm = document.getElementById("confirmation"); //déclaration de la variable
-  if (mdp.value == confirm.value){                       // si mdp=confirm NE PAS OUBLIER LE .VALUE
-    mdp.style.borderColor = "green";                     // la bordure sera verte
-    confirm.style.borderColor = " green";
-  } 
-  else{                                                  // sinon
-    mdp.style.borderColor = "red";                       // la bordure sera rouge
-    confirm.style.borderColor = "red";
+  <!--Dans le fichier HTML fourni,
+  mettre les bordures des inputs en rouge si les mots de passe sont différents.
+  Sinon les mettre en vert.-->
+  <script>
+  function color(){                                        // declare la fction. 
+    var mdp = document.getElementById("motdepasse");       //déclaration de la variable
+    var confirm = document.getElementById("confirmation") //déclaration de la variable
+    //NE PAS OUBLIER LE .VALUE
+    if (mdp.value == confirm.value){                       // si mdp=confirm
+      mdp.style.borderColor = "green";                     // la bordure sera verte
+      confirm.style.borderColor = " green";
+    }
+    else{                                                  // sinon
+      mdp.style.borderColor = "red";                       // la bordure sera rouge
+      confirm.style.borderColor = "red";
+    }
   }
-}
- </script>
+  </script>
 </body>
 </html>
